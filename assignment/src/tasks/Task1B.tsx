@@ -1,16 +1,12 @@
-import React, { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 import { Button} from "@nextui-org/react";
 import { Link } from 'react-router-dom';
 import Props from './Props';
 import { useContext } from 'react';
 import { MyContext } from '../contexts/contextProvider';
 
-interface Task1BProps {
-    // Define your props here (if any)
-}
 
-
-const Task1B: React.FC<Task1BProps> = () => {
+const Task1B = () => {
   const [age, setAge] = useState<number>(0);
   const { name } = useContext(MyContext);
 

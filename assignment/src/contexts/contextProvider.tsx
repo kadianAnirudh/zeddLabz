@@ -17,11 +17,21 @@ type MyContextProviderProps = {
 };
 
 const MyContextProvider = ({ children }: MyContextProviderProps) => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState(() => {
+    // Retrieve the name from local storage or use an empty string as the default value
+    return localStorage.getItem('name') || '';
+  });
+
+  const handleSetName = (newName: string) => {
+    // Update the name state
+    setName(newName);
+    // Store the name in local storage
+    localStorage.setItem('name', newName);
+  };
 
   const contextValue: MyContextType = {
     name,
-    setName,
+    setName: handleSetName,
   };
 
   return (
@@ -30,5 +40,6 @@ const MyContextProvider = ({ children }: MyContextProviderProps) => {
     </MyContext.Provider>
   );
 };
+
 
 export { MyContext, MyContextProvider };

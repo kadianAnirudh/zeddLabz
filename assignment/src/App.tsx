@@ -5,7 +5,7 @@ import Task1B from './tasks/Task1B';
 import Task2 from './tasks/Task2';
 import Task3 from './tasks/Task3';
 import Usestated from './tasks/Usestatecomp';
-import Useeffect from './tasks/UseEffect';
+import Useeffected from './tasks/UseEffect';
 import UsecontextComponent from './tasks/useContextComponent';
 import Usecallback from './tasks/UseCallback';
 import { MyContextProvider } from './contexts/contextProvider';
@@ -22,7 +22,7 @@ function App() {
           <Route path="/task2" element={<Task2 />} />
           <Route path="/task3" element={<Task3 />} />
           <Route path="/usestate" element={<Usestated/>} />
-          <Route path="/useeffect" element={<Useeffect />} />
+          <Route path="/useeffect" element={<Useeffected />} />
           <Route path="/usecallback" element={<Usecallback />} />
           <Route path="/usecontext" element={<UsecontextComponent />} />
         </Routes>
