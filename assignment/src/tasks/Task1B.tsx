@@ -2,13 +2,17 @@ import React, { useState, ChangeEvent } from 'react';
 import { Button} from "@nextui-org/react";
 import { Link } from 'react-router-dom';
 import Props from './Props';
+import { useContext } from 'react';
+import { MyContext } from '../contexts/contextProvider';
 
 interface Task1BProps {
-  // Define your props here (if any)
+    // Define your props here (if any)
 }
+
 
 const Task1B: React.FC<Task1BProps> = () => {
   const [age, setAge] = useState<number>(0);
+  const { name } = useContext(MyContext);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setAge(Number(event.target.value));
@@ -29,7 +33,7 @@ const Task1B: React.FC<Task1BProps> = () => {
             <Button className='mx-4' rounded> 🡸 Back </Button>
           </Link>
           <Link to="/task2">
-            <Button className='mx-4' rounded> Proceed 🡺 </Button>
+            <Button className='mx-4' rounded onClick={console.log(name)}> Proceed 🡺 </Button>
           </Link>
         </div>
       </div>

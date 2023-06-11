@@ -3,22 +3,32 @@ import Task1A from './tasks/Task1A';
 import HomePage from './tasks/HomePage';
 import Task1B from './tasks/Task1B';
 import Task2 from './tasks/Task2';
+import Task3 from './tasks/Task3';
+import Usestated from './tasks/Usestatecomp';
+import Useeffect from './tasks/UseEffect';
+import UsecontextComponent from './tasks/useContextComponent';
+import Usecallback from './tasks/UseCallback';
+import { MyContextProvider } from './contexts/contextProvider';
+
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
-    <>
-    <Router>
-      <Routes>
-    <Route path="/" Component={HomePage} />
-    <Route path="/task1a" Component={Task1A} />
-    <Route path="/task1b" Component={Task1B} />
-    <Route path="/task2" Component={Task2} />
-      </Routes>
-    </Router>
-    </>
-  )
+    <MyContextProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/task1a" element={<Task1A />} />
+          <Route path="/task1b" element={<Task1B />} />
+          <Route path="/task2" element={<Task2 />} />
+          <Route path="/task3" element={<Task3 />} />
+          <Route path="/usestate" element={<Usestated/>} />
+          <Route path="/useeffect" element={<Useeffect />} />
+          <Route path="/usecallback" element={<Usecallback />} />
+          <Route path="/usecontext" element={<UsecontextComponent />} />
+        </Routes>
+      </Router>
+    </MyContextProvider>
+  );
 }
 
-export default App
+export default App;

@@ -23,9 +23,9 @@ const Task2 = () => {
         <div className="flex mt-12 justify-center items-center px-4">
         </div>
         <div className="flex mt-2 justify-center items-center">
-          <Button className='' rounded onClick={decrementCount} size='sm'> - </Button>
+          <Button className='cursor-pointer' rounded onClick={decrementCount} size='sm'> - </Button>
           <h3 className="text-4xl font-semibold mx-4">{count}</h3>
-          <Button className='' rounded onClick={incrementCount} size='sm'> + </Button>
+          <Button className='cursor-pointer' rounded onClick={incrementCount} size='sm'> + </Button>
         </div>
         <div className="flex mt-12">
           <Link to="/task1b">
