@@ -31,7 +31,7 @@ const Task3 = () => {
           <Link to="/task2">
             <Button className='mx-4' rounded> 🡸 Back </Button>
           </Link>
-          <Link to="/task4">
+          <Link to="/task5">
             <Button className='mx-4' rounded> Proceed 🡺 </Button>
           </Link>
         </div>

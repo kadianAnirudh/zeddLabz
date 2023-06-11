@@ -3,6 +3,7 @@ import Task1A from './tasks/Task1A';
 import HomePage from './tasks/HomePage';
 import Task1B from './tasks/Task1B';
 import Task2 from './tasks/Task2';
+import Task5 from './tasks/Task5';
 import Task3 from './tasks/Task3';
 import Usestated from './tasks/Usestatecomp';
 import Useeffected from './tasks/UseEffect';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/task1b" element={<Task1B />} />
           <Route path="/task2" element={<Task2 />} />
           <Route path="/task3" element={<Task3 />} />
+          <Route path="/task5" element={<Task5 />} />
           <Route path="/usestate" element={<Usestated/>} />
           <Route path="/useeffect" element={<Useeffected />} />
           <Route path="/usecallback" element={<Usecallback />} />
